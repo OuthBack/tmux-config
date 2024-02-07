@@ -1,3 +1,4 @@
+#!/bin/bash
 selected=$(
 (find ~/repositorios -maxdepth 1 -type d;
 echo '/home/henrique/.config/i3';
