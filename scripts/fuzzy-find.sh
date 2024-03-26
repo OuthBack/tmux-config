@@ -3,6 +3,7 @@ selected=$(
 (find ~/repositorios -maxdepth 1 -type d;
 echo '/etc/nixos';
 echo '/home/henrique/.config/i3';
+echo '/home/henrique/.config/polybar';
 echo '/home/henrique/.config/tmux';
 echo '/home/henrique/.config/kitty';
 echo '/home/henrique/.config/nvim') | fzf-tmux --multi --reverse);
