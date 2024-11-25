@@ -1,5 +1,6 @@
 #!/bin/sh
 selected=$(
+<<<<<<< Updated upstream
 (find ~/repositorios -maxdepth 1 -type d;
 echo '/etc/nixos';
 echo '/home/henrique/.local/share/nvim/site/pack/packer/start/formatter.nvim';
@@ -9,6 +10,14 @@ echo '/home/henrique/.config/tmux';
 echo '/home/henrique/.config/kitty';
 echo '/home/henrique/.config/dunst';
 echo '/home/henrique/.config/nvim') | fzf-tmux --multi --reverse);
+=======
+(find ~/Projects -maxdepth 1 -type d;
+echo '/home/henrique.figueiredo/.config/i3';
+echo '/home/henrique.figueiredo/.config/polybar';
+echo '/home/henrique.figueiredo/.config/tmux';
+echo '/home/henrique.figueiredo/.config/kitty';
+echo '/home/henrique.figueiredo/.config/nvim') | fzf-tmux --multi --reverse);
+>>>>>>> Stashed changes
 
 
 selected_name=$(basename "$selected" | tr . _);
