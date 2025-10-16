@@ -1,6 +1,7 @@
 #!/bin/sh
 selected=$(
 (find ~/Projects -maxdepth 1 -type d;
+ehco '/home/henrique.figueiredo/tools/innovation-day-cli-foxbot'
 echo '/home/henrique.figueiredo/.config/i3';
 echo '/home/henrique.figueiredo/.config/polybar';
 echo '/home/henrique.figueiredo/.config/tmux';
@@ -30,3 +31,4 @@ fi
 tmux switch-client -t $selected_name;
 
 #Atention it can be #!/bin/sh or #!/bin/bash
+
