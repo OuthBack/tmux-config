@@ -1,14 +1,17 @@
 #!/bin/sh
 selected=$(
-(find ~/projects -maxdepth 1 -type d;
-echo '/home/henrique/.local/share/nvim/site/pack/packer/start/formatter.nvim';
-echo '/home/henrique/.config/hypr';
-echo '/home/henrique/.config/polybar';
-echo '/home/henrique/.config/tmux';
-echo '/home/henrique/.config/kitty';
-echo '/home/henrique/.config/mako';
-echo '/home/henrique/.config/waybar';
-echo '/home/henrique/.config/nvim') | fzf-tmux --multi --reverse);
+(
+    find ~/projects -maxdepth 1 -type d;
+    echo '/home/henrique/.local/share/nvim/site/pack/packer/start/formatter.nvim';
+    echo '/home/henrique/.config/hypr';
+    echo '/home/henrique/.config/polybar';
+    echo '/home/henrique/.config/tmux';
+    echo '/home/henrique/.config/kitty';
+    echo '/home/henrique/.config/mako';
+    echo '/home/henrique/.config/waybar';
+    echo '/home/henrique/.config/nvim';
+    find ~/ -maxdepth 1 -name ".*" -prune -o -type d -print
+) | fzf-tmux --multi --reverse);
 
 
 selected_name=$(basename "$selected" | tr . _);
