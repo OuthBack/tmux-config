@@ -11,7 +11,7 @@ selected=$(
     echo '/home/henrique/.config/waybar';
     echo '/home/henrique/.config/nvim';
     find ~/ -maxdepth 1 -name ".*" -prune -o -type d -print
-) | fzf-tmux --multi --reverse);
+) | fzf --tmux --multi --reverse);
 
 
 selected_name=$(basename "$selected" | tr . _);
